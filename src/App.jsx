@@ -6,6 +6,7 @@ import ProfitCalculator from './components/calculators/ProfitCalculator';
 import DiscountCalculator from './components/calculators/DiscountCalculator';
 import InvoiceGenerator from './components/InvoiceGenerator';
 import LeadCaptureModal from './components/LeadCaptureModal';
+import FAQ from './components/FAQ';
 
 function App() {
   const [activeTab, setActiveTab] = useState('gst');
@@ -66,6 +67,8 @@ function App() {
             {activeTab === 'invoice' && <InvoiceGenerator onAction={handleCalculateTrigger} />}
           </div>
         </div>
+
+        <FAQ />
       </main>
 
       {/* Footer */}

@@ -8,7 +8,10 @@ import { FileText, Plus, Trash2, Download } from 'lucide-react';
 export default function InvoiceGenerator({ onAction }) {
   const [data, setData] = useState({
     businessName: '',
+    businessAddress: '',
+    businessPhone: '',
     customerName: '',
+    customerAddress: '',
     invoiceNumber: '',
     date: new Date().toISOString().split('T')[0],
     businessLogo: null,
@@ -64,6 +67,23 @@ export default function InvoiceGenerator({ onAction }) {
               type="text" 
               value={data.businessName}
               onChange={e => setData({...data, businessName: e.target.value})}
+              placeholder="e.g. Acme Corp"
+              className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white/50 focus:bg-white outline-none mb-3"
+            />
+            <label className="block text-sm font-medium text-slate-700 mb-1">Business Address</label>
+            <input 
+              type="text" 
+              value={data.businessAddress}
+              onChange={e => setData({...data, businessAddress: e.target.value})}
+              placeholder="123 Market St, Mumbai"
+              className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white/50 focus:bg-white outline-none mb-3"
+            />
+            <label className="block text-sm font-medium text-slate-700 mb-1">WhatsApp / Contact No.</label>
+            <input 
+              type="text" 
+              value={data.businessPhone}
+              onChange={e => setData({...data, businessPhone: e.target.value})}
+              placeholder="+91 9876543210"
               className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white/50 focus:bg-white outline-none"
             />
             <label className="block text-xs font-medium text-slate-500 mt-2 mb-1">Business Logo (Optional)</label>
@@ -80,8 +100,17 @@ export default function InvoiceGenerator({ onAction }) {
               type="text" 
               value={data.customerName}
               onChange={e => setData({...data, customerName: e.target.value})}
-              className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white/50 focus:bg-white outline-none"
+              placeholder="Client Name"
+              className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white/50 focus:bg-white outline-none mb-3"
             />
+            <label className="block text-sm font-medium text-slate-700 mb-1">Customer Address</label>
+            <textarea 
+              value={data.customerAddress}
+              onChange={e => setData({...data, customerAddress: e.target.value})}
+              placeholder="Client Address"
+              rows="4"
+              className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white/50 focus:bg-white outline-none resize-none"
+            ></textarea>
             <label className="block text-xs font-medium text-slate-500 mt-2 mb-1">Customer Logo (Optional)</label>
             <input 
               type="file" 

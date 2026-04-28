@@ -11,7 +11,6 @@ export default function InvoiceGenerator({ onAction }) {
     businessAddress: '',
     businessPhone: '',
     customerName: '',
-    customerAddress: '',
     invoiceNumber: '',
     date: new Date().toISOString().split('T')[0],
     businessLogo: null,
@@ -103,14 +102,6 @@ export default function InvoiceGenerator({ onAction }) {
               placeholder="Client Name"
               className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white/50 focus:bg-white outline-none mb-3"
             />
-            <label className="block text-sm font-medium text-slate-700 mb-1">Customer Address</label>
-            <textarea 
-              value={data.customerAddress}
-              onChange={e => setData({...data, customerAddress: e.target.value})}
-              placeholder="Client Address"
-              rows="4"
-              className="w-full px-4 py-2 rounded-lg border border-slate-200 bg-white/50 focus:bg-white outline-none resize-none"
-            ></textarea>
             <label className="block text-xs font-medium text-slate-500 mt-2 mb-1">Customer Logo (Optional)</label>
             <input 
               type="file" 

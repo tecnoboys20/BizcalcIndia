@@ -1,6 +1,10 @@
 import { jsPDF } from "jspdf";
 import { formatINR } from "./formatters";
 
+const formatPDFCurrency = (amount) => {
+  return formatINR(amount).replace(/₹/g, 'Rs.');
+};
+
 export const generateInvoicePDF = (invoiceData) => {
   const doc = new jsPDF();
   
@@ -60,12 +64,6 @@ export const generateInvoicePDF = (invoiceData) => {
   doc.text(invoiceData.customerName || 'Customer Name', 120, customerY);
   customerY += 5;
 
-  if (invoiceData.customerAddress) {
-    const splitCustAddress = doc.splitTextToSize(invoiceData.customerAddress, 60);
-    doc.text(splitCustAddress, 120, customerY);
-    customerY += (splitCustAddress.length * 5);
-  }
-
   // Logos
   if (invoiceData.businessLogo) {
     try {
@@ -116,9 +114,9 @@ export const generateInvoicePDF = (invoiceData) => {
     
     doc.text(String(item.desc || 'Item'), 14, y);
     doc.text(String(qty), 100, y);
-    doc.text(formatINR(price), 130, y);
+    doc.text(formatPDFCurrency(price), 130, y);
     doc.text(`${gstRate}%`, 160, y);
-    doc.text(formatINR(itemFinal), 196, y, { align: "right" });
+    doc.text(formatPDFCurrency(itemFinal), 196, y, { align: "right" });
     y += 8;
   });
   
@@ -128,19 +126,19 @@ export const generateInvoicePDF = (invoiceData) => {
   doc.setFont("helvetica", "bold");
   doc.text("Subtotal:", 140, y);
   doc.setFont("helvetica", "normal");
-  doc.text(formatINR(subtotal), 196, y, { align: "right" });
+  doc.text(formatPDFCurrency(subtotal), 196, y, { align: "right" });
   
   y += 8;
   doc.setFont("helvetica", "bold");
   doc.text("Total GST:", 140, y);
   doc.setFont("helvetica", "normal");
-  doc.text(formatINR(totalGst), 196, y, { align: "right" });
+  doc.text(formatPDFCurrency(totalGst), 196, y, { align: "right" });
   
   y += 8;
   doc.setFont("helvetica", "bold");
   doc.text("Final Total:", 140, y);
   doc.setFont("helvetica", "bold");
-  doc.text(formatINR(finalTotal), 196, y, { align: "right" });
+  doc.text(formatPDFCurrency(finalTotal), 196, y, { align: "right" });
   
   doc.save(`Invoice_${invoiceData.invoiceNumber || 'draft'}.pdf`);
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import ToolCard from '../ToolCard';
 import { calculateProfit } from '../../utils/calculations';
 import { formatINR, formatPercent } from '../../utils/formatters';
@@ -19,11 +20,16 @@ export default function ProfitCalculator({ onCalculate }) {
   }, [cost, price]);
 
   return (
-    <ToolCard 
-      title="Profit Margin Calculator" 
-      description="Determine your net profit, gross margin, and markup."
-      icon={<TrendingUp className="w-6 h-6" />}
-    >
+    <>
+      <Helmet>
+        <title>Free Profit Margin Calculator | BizCalc India</title>
+        <meta name="description" content="Calculate your exact profit margin, gross margin, and markup percentages instantly with our free business calculator." />
+      </Helmet>
+      <ToolCard 
+        title="Profit Margin Calculator" 
+        description="Determine your net profit, gross margin, and markup."
+        icon={<TrendingUp className="w-6 h-6" />}
+      >
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -65,6 +71,7 @@ export default function ProfitCalculator({ onCalculate }) {
           </div>
         )}
       </div>
-    </ToolCard>
+      </ToolCard>
+    </>
   );
 }

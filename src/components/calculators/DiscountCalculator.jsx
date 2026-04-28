@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import ToolCard from '../ToolCard';
 import { calculateDiscount } from '../../utils/calculations';
 import { formatINR } from '../../utils/formatters';
@@ -19,11 +20,16 @@ export default function DiscountCalculator({ onCalculate }) {
   }, [price, discount]);
 
   return (
-    <ToolCard 
-      title="Discount Calculator" 
-      description="Find out the final price after applying a percentage discount."
-      icon={<Tag className="w-6 h-6" />}
-    >
+    <>
+      <Helmet>
+        <title>Free Discount Calculator | BizCalc India</title>
+        <meta name="description" content="Easily find out the final price after applying a percentage discount with our free business calculator tool." />
+      </Helmet>
+      <ToolCard 
+        title="Discount Calculator" 
+        description="Find out the final price after applying a percentage discount."
+        icon={<Tag className="w-6 h-6" />}
+      >
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -61,6 +67,7 @@ export default function DiscountCalculator({ onCalculate }) {
           </div>
         )}
       </div>
-    </ToolCard>
+      </ToolCard>
+    </>
   );
 }

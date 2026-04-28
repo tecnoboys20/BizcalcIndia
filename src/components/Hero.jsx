@@ -18,13 +18,13 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground mb-6">
-            Free GST & Business<br/>Calculator Toolkit <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">India</span>
+            Free Business Tool &<br/>Invoice Generator <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">India</span>
           </h1>
-          <p className="mt-4 text-xl text-slate-500 max-w-2xl mx-auto mb-10">
-            Calculate GST, Profit, Pricing, Invoices & More — Instantly. The ultimate toolkit designed specifically for Indian businesses.
-          </p>
+          <h2 className="mt-4 text-xl text-slate-500 max-w-2xl mx-auto mb-10">
+            Your all-in-one free calculator toolkit. Calculate GST, discover your exact profit margin, apply discounts, and use our free business tool invoice generator instantly.
+          </h2>
           <div className="flex justify-center flex-wrap gap-4 text-sm font-medium text-slate-600">
-            <span className="flex items-center glass-panel px-4 py-2 rounded-full shadow-sm"><span className="text-accent mr-2">✓</span> 100% Free</span>
+            <span className="flex items-center glass-panel px-4 py-2 rounded-full shadow-sm"><span className="text-accent mr-2">✓</span> 100% Free Calculator</span>
             <span className="flex items-center glass-panel px-4 py-2 rounded-full shadow-sm"><span className="text-accent mr-2">✓</span> No Signup Required</span>
             <span className="flex items-center glass-panel px-4 py-2 rounded-full shadow-sm"><span className="text-primary mr-2">★</span> Built for Indian Businesses</span>
           </div>

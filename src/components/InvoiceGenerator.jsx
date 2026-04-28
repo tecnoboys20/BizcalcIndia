@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import ToolCard from './ToolCard';
 import { generateInvoicePDF } from '../utils/pdfGenerator';
 import { formatINR } from '../utils/formatters';
@@ -45,11 +46,16 @@ export default function InvoiceGenerator({ onAction }) {
   };
 
   return (
-    <ToolCard 
-      title="Free Invoice Generator" 
-      description="Create professional invoices with automated GST breakdown."
-      icon={<FileText className="w-6 h-6" />}
-    >
+    <>
+      <Helmet>
+        <title>Free Business Tool Invoice Generator India | BizCalc</title>
+        <meta name="description" content="Use our completely free business tool invoice generator. Easily add your logo, calculate GST automatically, and download a professional PDF invoice instantly." />
+      </Helmet>
+      <ToolCard 
+        title="Free Invoice Generator" 
+        description="Create professional invoices with automated GST breakdown."
+        icon={<FileText className="w-6 h-6" />}
+      >
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -152,6 +158,7 @@ export default function InvoiceGenerator({ onAction }) {
           <Download className="w-5 h-5 mr-2" /> Download PDF Invoice
         </button>
       </div>
-    </ToolCard>
+      </ToolCard>
+    </>
   );
 }

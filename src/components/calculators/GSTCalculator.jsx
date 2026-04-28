@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import ToolCard from '../ToolCard';
 import { calculateGST } from '../../utils/calculations';
 import { formatINR } from '../../utils/formatters';
@@ -21,11 +22,16 @@ export default function GSTCalculator({ onCalculate }) {
   }, [amount, rate, type]);
 
   return (
-    <ToolCard 
-      title="GST Calculator" 
-      description="Quickly add or remove GST from any amount."
-      icon={<Percent className="w-6 h-6" />}
-    >
+    <>
+      <Helmet>
+        <title>Free GST Calculator Online | BizCalc India</title>
+        <meta name="description" content="Use our free GST calculator to easily add or remove Goods and Services Tax from your amounts. Specifically built for Indian business owners." />
+      </Helmet>
+      <ToolCard 
+        title="GST Calculator" 
+        description="Quickly add or remove GST from any amount."
+        icon={<Percent className="w-6 h-6" />}
+      >
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -89,6 +95,7 @@ export default function GSTCalculator({ onCalculate }) {
           </div>
         )}
       </div>
-    </ToolCard>
+      </ToolCard>
+    </>
   );
 }

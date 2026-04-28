@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bizcalcindia.netlify.app/sitemap.xml

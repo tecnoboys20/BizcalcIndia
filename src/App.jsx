@@ -68,7 +68,7 @@ function App() {
           </div>
         </div>
 
-        <FAQ />
+        <FAQ activeTab={activeTab} />
       </main>
 
       {/* Footer */}

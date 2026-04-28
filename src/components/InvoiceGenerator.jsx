@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ToolCard from './ToolCard';
 import { generateInvoicePDF } from '../utils/pdfGenerator';
@@ -6,17 +6,52 @@ import { formatINR } from '../utils/formatters';
 import { FileText, Plus, Trash2, Download } from 'lucide-react';
 
 export default function InvoiceGenerator({ onAction }) {
-  const [data, setData] = useState({
-    businessName: '',
-    businessAddress: '',
-    businessPhone: '',
-    customerName: '',
-    invoiceNumber: '',
-    date: new Date().toISOString().split('T')[0],
-    businessLogo: null,
-    customerLogo: null,
-    items: [{ desc: '', qty: 1, price: 0, gst: 18 }]
+  const [data, setData] = useState(() => {
+    // Load from cache on initial load
+    const saved = localStorage.getItem('bizcalc_invoice_cache');
+    const defaultData = {
+      businessName: '',
+      businessAddress: '',
+      businessPhone: '',
+      customerName: '',
+      invoiceNumber: '',
+      date: new Date().toISOString().split('T')[0],
+      businessLogo: null,
+      customerLogo: null,
+      items: [{ desc: '', qty: 1, price: 0, gst: 18 }]
+    };
+
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return { ...defaultData, ...parsed }; // Merge cached data
+      } catch (e) {
+        console.error("Cache read error", e);
+      }
+    }
+    return defaultData;
   });
+
+  // Save to cache whenever business details change
+  useEffect(() => {
+    try {
+      localStorage.setItem('bizcalc_invoice_cache', JSON.stringify({
+        businessName: data.businessName,
+        businessAddress: data.businessAddress,
+        businessPhone: data.businessPhone,
+        businessLogo: data.businessLogo 
+      }));
+    } catch (e) {
+      // If logo is too large (QuotaExceeded), save without it
+      console.warn("Logo too large for cache. Saving text only.");
+      localStorage.setItem('bizcalc_invoice_cache', JSON.stringify({
+        businessName: data.businessName,
+        businessAddress: data.businessAddress,
+        businessPhone: data.businessPhone,
+        businessLogo: null 
+      }));
+    }
+  }, [data.businessName, data.businessAddress, data.businessPhone, data.businessLogo]);
 
   const handleLogoUpload = (e, field) => {
     const file = e.target.files[0];

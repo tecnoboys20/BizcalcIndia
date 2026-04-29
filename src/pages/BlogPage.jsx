@@ -43,11 +43,22 @@ export default function BlogPage() {
               className="group bg-white/70 backdrop-blur-md border border-white/60 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               {/* Cover */}
-              <div className={`h-36 bg-gradient-to-br ${post.coverColor} flex items-end p-5`}>
-                <span className="inline-flex items-center gap-1 text-xs font-semibold text-white/90 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                  <Tag className="w-3 h-3" /> {post.category}
-                </span>
-              </div>
+              {post.coverImage ? (
+                <div className="h-36 overflow-hidden">
+                  <img 
+                    src={post.coverImage} 
+                    alt={post.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className={`h-36 bg-gradient-to-br ${post.coverColor} flex items-end p-5`}>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-white/90 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
+                    <Tag className="w-3 h-3" /> {post.category}
+                  </span>
+                </div>
+              )}
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">

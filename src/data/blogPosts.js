@@ -6,6 +6,7 @@ export const blogPosts = [
     category: 'GST & Taxes',
     date: '2026-04-25',
     readTime: '6 min read',
+    coverImage: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80&auto=format&fit=crop',
     coverColor: 'from-blue-500 to-indigo-600',
     content: `
 ## What is GST?
@@ -71,6 +72,7 @@ Skip the manual calculations and use our **free online GST Calculator** to insta
     category: 'Business Finance',
     date: '2026-04-22',
     readTime: '7 min read',
+    coverImage: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80&auto=format&fit=crop',
     coverColor: 'from-emerald-500 to-teal-600',
     content: `
 ## Why Profit Margin Matters
@@ -143,6 +145,7 @@ Use our **free Profit Margin Calculator** to instantly find your gross margin, n
     category: 'Invoicing',
     date: '2026-04-18',
     readTime: '5 min read',
+    coverImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80&auto=format&fit=crop',
     coverColor: 'from-purple-500 to-violet-600',
     content: `
 ## What is a GST Invoice?
@@ -204,6 +207,7 @@ No subscription. No watermark. 100% free.
     category: 'Business Tools',
     date: '2026-04-15',
     readTime: '8 min read',
+    coverImage: 'https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=600&q=80&auto=format&fit=crop',
     coverColor: 'from-orange-500 to-amber-600',
     content: `
 ## The Challenge of Running a Small Business in India
@@ -295,6 +299,7 @@ All of BizCalc India's tools are available in one place — 100% free, no sign-u
     category: 'GST & Taxes',
     date: '2026-04-10',
     readTime: '6 min read',
+    coverImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&auto=format&fit=crop',
     coverColor: 'from-red-500 to-rose-600',
     content: `
 ## Who Must Register for GST in India?

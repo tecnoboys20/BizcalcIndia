@@ -123,8 +123,14 @@ export default function BlogPostPage() {
 
       <div className="min-h-screen">
         {/* Hero Banner */}
-        <div className={`pt-24 pb-16 bg-gradient-to-br ${post.coverColor} relative overflow-hidden`}>
-          <div className="absolute inset-0 bg-black/20" />
+        <div className={`pt-24 pb-16 relative overflow-hidden ${post.coverImage ? '' : `bg-gradient-to-br ${post.coverColor}`}`}>
+          {post.coverImage && (
+            <div className="absolute inset-0">
+              <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-black/55" />
+            </div>
+          )}
+          {!post.coverImage && <div className="absolute inset-0 bg-black/20" />}
           <div className="relative max-w-3xl mx-auto px-4 text-white">
             <Link to="/blog" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium mb-8 transition-colors">
               <ArrowLeft className="w-4 h-4" /> Back to Blog

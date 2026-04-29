@@ -1,0 +1,32 @@
+name: Generate Daily Blog Post
+
+on:
+  schedule:
+    - cron: '30 2 * * *'   # 8:00 AM IST daily (2:30 AM UTC)
+  workflow_dispatch:        # Manual trigger for testing
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install script dependencies
+        run: npm install node-fetch fast-xml-parser
+        working-directory: ${{ github.workspace }}
+
+      - name: Run blog generation script
+        run: node scripts/generate-blog.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BLOG_GITHUB_TOKEN: ${{ secrets.BLOG_GITHUB_TOKEN }}
+          PUBLISH_SECRET: ${{ secrets.PUBLISH_SECRET }}

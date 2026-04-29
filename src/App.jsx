@@ -11,6 +11,10 @@ import FAQ from './components/FAQ';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 
+import PricingPage from './pages/PricingPage';
+import { AuthProvider } from './contexts/AuthContext';
+import AuthModal from './components/AuthModal';
+
 function App() {
   const [activeTab, setActiveTab] = useState('gst');
   const [calcCount, setCalcCount] = useState(0);
@@ -36,8 +40,10 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-background relative selection:bg-primary/30">
-      <Navbar />
+    <AuthProvider>
+      <div className="min-h-screen bg-background relative selection:bg-primary/30">
+        <Navbar />
+        <AuthModal />
       
       <Routes>
         {/* Home */}
@@ -80,6 +86,9 @@ function App() {
         {/* Blog */}
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogPostPage />} />
+        
+        {/* Pricing */}
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
 
       {/* Footer */}
@@ -95,6 +104,7 @@ function App() {
         toolUsed={activeTab}
       />
     </div>
+    </AuthProvider>
   );
 }
 

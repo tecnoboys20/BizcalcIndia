@@ -1,23 +1,34 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder-project.supabase.co'
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key'
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-// Create a single supabase client for interacting with your database
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-// Leads table insert
+// Insert a lead (email capture from popup)
 export const recordLead = async (leadData) => {
-  // If keys are placeholder, mock success
-  if (supabaseUrl.includes('placeholder')) {
-    console.log('Mock: Lead recorded', leadData);
-    return { data: leadData, error: null };
-  }
-  
   const { data, error } = await supabase
     .from('leads')
-    .insert([
-      { ...leadData, created_at: new Date().toISOString() }
-    ]);
+    .insert([{ ...leadData, created_at: new Date().toISOString() }]);
+  if (error) console.error('Lead insert error:', error.message);
+  return { data, error };
+}
+
+// Insert or update a user profile
+export const upsertProfile = async (profileData) => {
+  const { data, error } = await supabase
+    .from('profiles')
+    .upsert([profileData], { onConflict: 'email' });
+  if (error) console.error('Profile upsert error:', error.message);
+  return { data, error };
+}
+
+// Get a user profile by email
+export const getProfile = async (email) => {
+  const { data, error } = await supabase
+    .from('profiles')
+    .select('*')
+    .eq('email', email)
+    .single();
   return { data, error };
 }

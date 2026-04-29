@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calculator } from 'lucide-react';
 
 export default function Navbar() {
@@ -13,9 +14,9 @@ export default function Navbar() {
             <span className="font-bold text-xl tracking-tight text-foreground">BizCalc<span className="text-primary">India</span></span>
           </div>
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#" className="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Home</a>
+            <Link to="/" className="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Home</Link>
             <a href="#" className="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Services</a>
-            <a href="#" className="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Tools</a>
+            <Link to="/blog" className="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Blog</Link>
             <a href="#" className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-400 to-blue-500 hover:opacity-80 transition-opacity">Buy Me a Coffee</a>
             <a href="https://instagram.com/we.arecc" target="_blank" rel="noreferrer" className="text-sm font-medium text-slate-500 hover:text-primary transition-colors">we.arecc</a>
           </div>

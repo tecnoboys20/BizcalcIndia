@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
 import { XMLParser } from 'fast-xml-parser';
+// Using native fetch (Node 18+)
 
 const GEMINI_KEY = process.env.GEMINI_API_KEY;
 const PEXELS_KEY = process.env.PEXELS_API_KEY;
@@ -52,7 +52,7 @@ Write a complete SEO-optimized blog article. Respond ONLY with valid JSON — no
 }`;
 
   const resp = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_KEY}`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

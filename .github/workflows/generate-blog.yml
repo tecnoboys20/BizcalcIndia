@@ -12,14 +12,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
+      - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install script dependencies
-        run: npm install node-fetch fast-xml-parser
-        working-directory: ${{ github.workspace }}
+        run: npm install --no-save fast-xml-parser
 
       - name: Run blog generation script
         run: node scripts/generate-blog.mjs

@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Clock, Tag, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Clock, Tag, Calendar } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
 
 // Simple markdown-ish renderer for the blog content

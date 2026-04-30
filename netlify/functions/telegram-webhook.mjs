@@ -1,4 +1,4 @@
-// netlify/functions/telegram-webhook.mjs
+// netlify/functions/telegram-webhook.mjs - Version 1.1 (Forced Redeploy)
 const GEMINI_KEY = process.env.GEMINI_API_KEY;
 const PEXELS_KEY = process.env.PEXELS_API_KEY;
 const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;

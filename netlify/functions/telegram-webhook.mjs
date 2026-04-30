@@ -83,6 +83,11 @@ export default async (req) => {
       }
     );
     const geminiData = await geminiResp.json();
+    
+    if (!geminiData.candidates || geminiData.candidates.length === 0) {
+      throw new Error(`Gemini API Error: ${JSON.stringify(geminiData.error || geminiData)}`);
+    }
+
     const geminiText = geminiData.candidates[0].content.parts[0].text;
     const jsonMatch = geminiText.match(/\{[\s\S]*\}/);
     const article = JSON.parse(jsonMatch[0]);

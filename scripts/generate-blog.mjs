@@ -63,7 +63,9 @@ Write a complete SEO-optimized blog article. Respond ONLY with valid JSON — no
     }
   );
   const data = await resp.json();
-  if (!data.candidates?.[0]) throw new Error('Gemini error: ' + JSON.stringify(data));
+  if (!data.candidates || data.candidates.length === 0) {
+    throw new Error('Gemini error: ' + JSON.stringify(data.error || data));
+  }
   const text = data.candidates[0].content.parts[0].text;
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error('No JSON in Gemini response:\n' + text.slice(0, 300));

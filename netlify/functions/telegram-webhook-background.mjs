@@ -176,15 +176,19 @@ export default async (req) => {
       body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: "✅ *Draft Saved!* Preparing your full review..." , parse_mode: 'Markdown' })
     });
 
-    // 6. Send Full Review to Telegram
-    // Truncate to 4000 chars to stay under Telegram's 4096 limit
     const fullContent = article.content.length > 4000 
       ? article.content.substring(0, 4000) + "\n\n...(Truncated for Telegram preview)..." 
       : article.content;
 
+    const escapeHTML = (str) => str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+    
+    const safeTitle = escapeHTML(article.title);
+    const safeExcerpt = escapeHTML(article.excerpt);
+    const safeContent = escapeHTML(fullContent);
+
     const publishUrl = `${NETLIFY_URL}/.netlify/functions/publish-blog?gist=${gistId}&token=${PUBLISH_SECRET}`;
     
-    const responseMsg = `📝 *FULL DRAFT REVIEW:* ${article.title}\n\n${article.excerpt}\n\n---\n${fullContent}\n\n🖼 Image: ${imageUrl ? '✅ Found' : '❌ Not found'}`;
+    const responseMsg = `<b>📝 FULL DRAFT REVIEW: ${safeTitle}</b>\n\n<i>${safeExcerpt}</i>\n\n<pre>${safeContent}</pre>\n\n🖼 Image: ${imageUrl ? '✅ Found' : '❌ Not found'}`;
 
     await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
       method: 'POST',
@@ -192,7 +196,7 @@ export default async (req) => {
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
         text: responseMsg,
-        parse_mode: 'Markdown',
+        parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [[
             { text: '🚀 Publish Live', url: publishUrl },

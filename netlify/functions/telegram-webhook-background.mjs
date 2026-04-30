@@ -14,6 +14,9 @@ export default async (req) => {
     const body = await req.json();
     const message = body.message;
 
+    if (!BLOG_GITHUB_TOKEN) throw new Error("Missing BLOG_GITHUB_TOKEN in environment.");
+    if (!TELEGRAM_TOKEN) throw new Error("Missing TELEGRAM_BOT_TOKEN in environment.");
+
     if (!message || String(message.chat.id) !== String(TELEGRAM_CHAT_ID)) {
       return new Response('Unauthorized or no message', { status: 200 });
     }
@@ -154,14 +157,24 @@ export default async (req) => {
     });
     
     if (!gistResp.ok) {
-      const errorData = await gistResp.json();
-      throw new Error(`GitHub Gist Error: ${errorData.message || gistResp.statusText}`);
+      let errorInfo = gistResp.statusText;
+      try {
+        const errorData = await gistResp.json();
+        errorInfo = errorData.message || errorInfo;
+      } catch (e) {}
+      throw new Error(`GitHub Gist Error: ${errorInfo} (Status: ${gistResp.status})`);
     }
 
     const gistData = await gistResp.json();
     const gistId = gistData.id;
 
     if (!gistId) throw new Error("GitHub Gist ID is missing after creation.");
+
+    await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: "✅ *Draft Saved!* Preparing your full review..." , parse_mode: 'Markdown' })
+    });
 
     // 6. Send Full Review to Telegram
     // Truncate to 4000 chars to stay under Telegram's 4096 limit

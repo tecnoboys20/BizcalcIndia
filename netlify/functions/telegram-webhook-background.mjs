@@ -152,7 +152,14 @@ export default async (req) => {
       body: JSON.stringify({
         description: `BizCalc Manual Draft: ${draft.title}`,
         public: false,
-        files: { 'draft.json': { content: JSON.stringify(draft, null, 2) } },
+        files: {
+          'README.md': {
+            content: `# ${draft.title}\n\n> ${draft.excerpt}\n\n---\n\n${draft.content}`
+          },
+          'draft.json': { 
+            content: JSON.stringify(draft, null, 2) 
+          }
+        },
       }),
     });
     

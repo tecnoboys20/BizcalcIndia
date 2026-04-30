@@ -1,4 +1,4 @@
-// netlify/functions/telegram-webhook.mjs - Version 1.1 (Forced Redeploy)
+// netlify/functions/telegram-webhook-background.mjs
 const GEMINI_KEY = process.env.GEMINI_API_KEY;
 const PEXELS_KEY = process.env.PEXELS_API_KEY;
 const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
@@ -180,4 +180,4 @@ export default async (req) => {
   }
 };
 
-export const config = { path: '/.netlify/functions/telegram-webhook' };
+export const config = { path: '/.netlify/functions/telegram-webhook-background' };

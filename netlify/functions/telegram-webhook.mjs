@@ -137,11 +137,15 @@ export default async (req) => {
     const gistData = await gistResp.json();
     const gistId = gistData.id;
 
-    // 6. Send Preview to Telegram
-    const preview = article.content.substring(0, 400).replace(/[*_[\]()~`>#+=|{}.!-]/g, '\\$&');
+    // 6. Send Full Review to Telegram
+    // Truncate to 4000 chars to stay under Telegram's 4096 limit
+    const fullContent = article.content.length > 4000 
+      ? article.content.substring(0, 4000) + "\n\n...(Truncated for Telegram preview)..." 
+      : article.content;
+
     const publishUrl = `${NETLIFY_URL}/.netlify/functions/publish-blog?gist=${gistId}&token=${PUBLISH_SECRET}`;
     
-    const responseMsg = `📝 *Draft Ready:* ${article.title}\n\n${article.excerpt}\n\n---\n${preview}...\n\n🖼 Image: ${imageUrl ? '✅ Found' : '❌ Not found'}`;
+    const responseMsg = `📝 *FULL DRAFT REVIEW:* ${article.title}\n\n${article.excerpt}\n\n---\n${fullContent}\n\n🖼 Image: ${imageUrl ? '✅ Found' : '❌ Not found'}`;
 
     await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
       method: 'POST',
@@ -164,13 +168,12 @@ export default async (req) => {
   } catch (err) {
     console.error(err);
     // Notify user of error
-    const keyPrefix = GEMINI_KEY ? GEMINI_KEY.substring(0, 6) + "..." : "MISSING";
     await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
-        text: `❌ *Error:* ${err.message}\n(Using Key: ${keyPrefix})`
+        text: `❌ *Error:* ${err.message}`
       })
     });
     return new Response('Error', { status: 200 }); // Always 200 to keep Telegram happy

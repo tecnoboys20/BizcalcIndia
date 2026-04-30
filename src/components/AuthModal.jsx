@@ -27,7 +27,7 @@ export default function AuthModal() {
       } else {
         const { error } = await supabase.auth.signUp({ email, password });
         if (error) throw error;
-        setSuccessMsg('✅ Account created! Check your email to confirm, then sign in.');
+        setSuccessMsg('Account created! Check your email to confirm, then sign in.');
         setLoading(false);
         return;
       }
@@ -103,10 +103,10 @@ export default function AuthModal() {
                 {/* Header */}
                 <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1e293b', marginBottom: '0.4rem' }}>
-                    {isLogin ? '👋 Welcome Back' : '🚀 Create Account'}
+                    {isLogin ? 'Welcome Back' : 'Create Account'}
                   </div>
                   <p style={{ fontSize: '0.85rem', color: '#64748b', margin: 0 }}>
-                    {isLogin ? 'Sign in to access your account' : 'Join free to unlock premium features!'}
+                    {isLogin ? 'Sign in to access your account' : 'Join free to unlock premium features.'}
                   </p>
                 </div>
 

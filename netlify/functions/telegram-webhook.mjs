@@ -39,34 +39,35 @@ export default async (req) => {
 
     let prompt = "";
     if (isFullArticle) {
-      prompt = `You are an editor for BizCalc India. I am providing a full article. 
-      Please FORMAT it for the blog. Fix any grammar, ensure it's professional, and add SEO meta data.
-      Respond ONLY with valid JSON (no markdown wrapper):
+      prompt = `You are a Senior Content Editor for BizCalc India. I am providing an article draft. 
+      Refine it for high-authority SEO (E-E-A-T). Fix grammar, ensure a professional yet accessible tone for Indian MSME owners, and optimize the structure.
+      Respond ONLY with valid JSON:
       {
-        "id": "url-friendly-slug",
-        "title": "Professional SEO Title",
-        "excerpt": "Compelling meta description",
-        "category": "Pick: GST & Taxes | Business Growth | Finance Tips",
-        "readTime": "Estimate, e.g. 5 min read",
+        "id": "seo-optimized-slug",
+        "title": "Title under 60 chars with high-intent keywords",
+        "excerpt": "Meta description (150 chars) that drives clicks",
+        "category": "GST & Taxes | Business Growth | Finance Tips",
+        "readTime": "e.g. 6 min read",
         "imageKeywords": "3-4 Pexels search terms",
-        "content": "The full article in high-quality markdown format (intro, H2 headers, tables, lists)."
+        "content": "The refined article in high-quality markdown (H2s, bolding, lists, tables)."
       }
       
-      ARTICLE CONTENT:
+      DRAFT:
       ${userInput}`;
     } else {
-      prompt = `You are a content writer for BizCalc India. 
-      Write a complete, high-quality, SEO-optimized blog article based on this TOPIC: "${userInput}".
-      The article should be for Indian small business owners.
-      Respond ONLY with valid JSON (no markdown wrapper):
+      prompt = `You are a Senior SEO Content Strategist for BizCalc India. 
+      Write a high-authority, helpful blog article for Indian small business owners on the TOPIC: "${userInput}".
+      Follow Google's E-E-A-T guidelines: provide actual value, use a professional Indian business tone, and ensure technical accuracy (especially for GST/Tax topics).
+      
+      Respond ONLY with valid JSON:
       {
-        "id": "url-friendly-slug",
-        "title": "Professional SEO Title",
-        "excerpt": "Compelling meta description",
-        "category": "Pick: GST & Taxes | Business Growth | Finance Tips",
-        "readTime": "Estimate, e.g. 5 min read",
+        "id": "seo-optimized-slug",
+        "title": "Title under 60 chars with high-intent keywords",
+        "excerpt": "Meta description (150 chars) that drives clicks",
+        "category": "GST & Taxes | Business Growth | Finance Tips",
+        "readTime": "e.g. 6 min read",
         "imageKeywords": "3-4 Pexels search terms",
-        "content": "Full 700+ word markdown article: intro, 5 H2 sections, 1 table, bullet lists, and closing CTA."
+        "content": "A high-authority, 750-word markdown article following E-E-A-T guidelines for Indian entrepreneurs. Include: 1. A hook-driven introduction. 2. 5 detailed H2 sections with actionable insights. 3. 1 data-rich comparison table. 4. Bulleted lists for readability. 5. Strategic bolding of semantic keywords. 6. A professional closing CTA connecting the topic to BizCalc India's free tools (e.g., GST calculator, Invoice maker)."
       }`;
     }
 

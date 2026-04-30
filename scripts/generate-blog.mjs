@@ -48,7 +48,7 @@ Write a complete SEO-optimized blog article. Respond ONLY with valid JSON — no
   "category": "GST & Taxes",
   "readTime": "7 min read",
   "imageKeywords": "3-4 Pexels search keywords matching the topic",
-  "content": "Full 950-word markdown article: intro, 5 H2 sections, 1 table, bullet lists, FAQ with 3 Q&As, closing CTA mentioning BizCalc India free tools. Use **bold** for key terms."
+  "content": "Full 950-word markdown article: intro, 5 H2 sections, 1 table, bullet lists, and closing CTA mentioning BizCalc India free tools. Use **bold** for key terms."
 }`;
 
   const resp = await fetch(

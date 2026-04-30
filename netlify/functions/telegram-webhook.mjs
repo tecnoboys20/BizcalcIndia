@@ -49,7 +49,7 @@ export default async (req) => {
         "category": "Pick: GST & Taxes | Business Growth | Finance Tips",
         "readTime": "Estimate, e.g. 5 min read",
         "imageKeywords": "3-4 Pexels search terms",
-        "content": "The full article in high-quality markdown format."
+        "content": "The full article in high-quality markdown format (intro, H2 headers, tables, lists)."
       }
       
       ARTICLE CONTENT:
@@ -66,7 +66,7 @@ export default async (req) => {
         "category": "Pick: GST & Taxes | Business Growth | Finance Tips",
         "readTime": "Estimate, e.g. 5 min read",
         "imageKeywords": "3-4 Pexels search terms",
-        "content": "Full 900+ word markdown article: intro, 5 H2 sections, 1 table, bullet lists, FAQ, and closing CTA."
+        "content": "Full 900+ word markdown article: intro, 5 H2 sections, 1 table, bullet lists, and closing CTA."
       }`;
     }
 

@@ -66,7 +66,7 @@ export default async (req) => {
         "category": "Pick: GST & Taxes | Business Growth | Finance Tips",
         "readTime": "Estimate, e.g. 5 min read",
         "imageKeywords": "3-4 Pexels search terms",
-        "content": "Full 900+ word markdown article: intro, 5 H2 sections, 1 table, bullet lists, and closing CTA."
+        "content": "Full 700+ word markdown article: intro, 5 H2 sections, 1 table, bullet lists, and closing CTA."
       }`;
     }
 
@@ -89,8 +89,20 @@ export default async (req) => {
     }
 
     const geminiText = geminiData.candidates[0].content.parts[0].text;
-    const jsonMatch = geminiText.match(/\{[\s\S]*\}/);
-    const article = JSON.parse(jsonMatch[0]);
+    
+    let article;
+    try {
+      // Find the first { and the last }
+      const start = geminiText.indexOf('{');
+      const end = geminiText.lastIndexOf('}');
+      if (start === -1 || end === -1) throw new Error("No JSON found");
+      
+      const jsonStr = geminiText.substring(start, end + 1);
+      article = JSON.parse(jsonStr);
+    } catch (e) {
+      console.error("JSON Parse Error. Raw text:", geminiText);
+      throw new Error(`JSON Formatting Error: Gemini sent invalid formatting. Please try again with a slightly different topic.`);
+    }
 
     // 4. Find Image
     const pexelsResp = await fetch(

@@ -152,8 +152,16 @@ export default async (req) => {
         files: { 'draft.json': { content: JSON.stringify(draft, null, 2) } },
       }),
     });
+    
+    if (!gistResp.ok) {
+      const errorData = await gistResp.json();
+      throw new Error(`GitHub Gist Error: ${errorData.message || gistResp.statusText}`);
+    }
+
     const gistData = await gistResp.json();
     const gistId = gistData.id;
+
+    if (!gistId) throw new Error("GitHub Gist ID is missing after creation.");
 
     // 6. Send Full Review to Telegram
     // Truncate to 4000 chars to stay under Telegram's 4096 limit

@@ -14,7 +14,7 @@ export default async (req) => {
     const body = await req.json();
     const message = body.message;
 
-    if (!BLOG_GITHUB_TOKEN) throw new Error("Missing BLOG_GITHUB_TOKEN in environment.");
+    if (!GITHUB_TOKEN) throw new Error("Missing BLOG_GITHUB_TOKEN in environment.");
     if (!TELEGRAM_TOKEN) throw new Error("Missing TELEGRAM_BOT_TOKEN in environment.");
 
     if (!message || String(message.chat.id) !== String(TELEGRAM_CHAT_ID)) {

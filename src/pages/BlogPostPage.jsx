@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Clock, Tag, Calendar } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
+import { authors, defaultAuthor } from '../data/authors';
 
 // Simple markdown-ish renderer for the blog content
 function renderContent(content) {
@@ -96,6 +97,7 @@ export default function BlogPostPage() {
 
   if (!post) return <Navigate to="/blog" />;
 
+  const author = authors[post.authorId] || defaultAuthor;
   const relatedPosts = blogPosts.filter(p => p.id !== id).slice(0, 2);
 
   return (
@@ -113,6 +115,10 @@ export default function BlogPostPage() {
           "headline": post.title,
           "description": post.excerpt,
           "datePublished": post.date,
+          "author": {
+            "@type": "Person",
+            "name": author.name
+          },
           "publisher": {
             "@type": "Organization",
             "name": "BizCalc India",
@@ -135,7 +141,10 @@ export default function BlogPostPage() {
             <Link to="/blog" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium mb-8 transition-colors">
               <ArrowLeft className="w-4 h-4" /> Back to Blog
             </Link>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-bold bg-green-500 text-white px-2 py-0.5 rounded uppercase tracking-wider">
+                Expert Verified
+              </span>
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
                 <Tag className="w-3 h-3" /> {post.category}
               </span>
@@ -162,6 +171,20 @@ export default function BlogPostPage() {
           >
             {renderContent(post.content)}
           </motion.article>
+
+          {/* Author Section */}
+          <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col sm:flex-row gap-6 items-start">
+            <img src={author.avatar} alt={author.name} className="w-16 h-16 rounded-2xl object-cover shadow-sm border-2 border-white" />
+            <div>
+              <h4 className="font-bold text-slate-800 text-lg mb-1">{author.name}</h4>
+              <p className="text-primary text-xs font-semibold mb-2">{author.role}</p>
+              <p className="text-slate-500 text-sm leading-relaxed mb-4">{author.bio}</p>
+              <div className="flex gap-3">
+                <span className="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded font-bold uppercase tracking-tight">Financial Contributor</span>
+                <span className="text-[10px] bg-blue-50 text-blue-500 px-2 py-0.5 rounded font-bold uppercase tracking-tight italic tracking-widest">Verified Expert</span>
+              </div>
+            </div>
+          </div>
 
           {/* CTA */}
           <div className="mt-12 p-6 rounded-3xl bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 text-center">

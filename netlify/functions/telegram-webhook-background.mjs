@@ -51,8 +51,9 @@ export default async (req) => {
         "excerpt": "Meta description (150 chars) that drives clicks",
         "category": "GST & Taxes | Business Growth | Finance Tips",
         "readTime": "e.g. 6 min read",
-        "imageKeywords": "3-4 Pexels search terms",
-        "content": "The refined article in high-quality markdown (H2s, bolding, lists, tables)."
+        "authorId": "arjun-sharma",
+        "imageKeywords": "candid real life authentic indian business",
+        "content": "The refined article in high-quality markdown. Add a 'Pro Tip' or 'Expert Insight' block to sound more human."
       }
       
       DRAFT:
@@ -69,8 +70,9 @@ export default async (req) => {
         "excerpt": "Meta description (150 chars) that drives clicks",
         "category": "GST & Taxes | Business Growth | Finance Tips",
         "readTime": "e.g. 6 min read",
-        "imageKeywords": "3-4 Pexels search terms",
-        "content": "A high-authority, 750-word markdown article following E-E-A-T guidelines for Indian entrepreneurs. Include: 1. A hook-driven introduction. 2. 5 detailed H2 sections with actionable insights. 3. 1 data-rich comparison table. 4. Bulleted lists for readability. 5. Strategic bolding of semantic keywords. 6. A professional closing CTA connecting the topic to BizCalc India's free tools (e.g., GST calculator, Invoice maker)."
+        "authorId": "arjun-sharma",
+        "imageKeywords": "candid real life authentic indian office/business scenario",
+        "content": "A high-authority, 1000-word masterclass following E-E-A-T. IMPORTANT: Include a section on 'Real World Experience' or 'What People are Asking on Social Media' to add human context. Use 1 table, 5 H2s, and actionable Indian business advice."
       }`;
     }
 

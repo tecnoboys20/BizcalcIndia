@@ -164,12 +164,13 @@ export default async (req) => {
   } catch (err) {
     console.error(err);
     // Notify user of error
+    const keyPrefix = GEMINI_KEY ? GEMINI_KEY.substring(0, 6) + "..." : "MISSING";
     await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
-        text: `❌ *Error:* ${err.message}`
+        text: `❌ *Error:* ${err.message}\n(Using Key: ${keyPrefix})`
       })
     });
     return new Response('Error', { status: 200 }); // Always 200 to keep Telegram happy

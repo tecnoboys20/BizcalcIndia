@@ -72,6 +72,12 @@ export default async (req) => {
     }
 
     // 3. Generate with Gemini
+    await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: "✍️ *Step 1/3:* Writing the SEO article..." , parse_mode: 'Markdown' })
+    });
+
     const geminiResp = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_KEY}`,
       {
@@ -106,10 +112,22 @@ export default async (req) => {
     }
 
     // 4. Find Image & Save Gist (Parallel to save time)
+    await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: "🖼 *Step 2/3:* Finding a professional cover image..." , parse_mode: 'Markdown' })
+    });
+
     const pexelsPromise = fetch(
       `https://api.pexels.com/v1/search?query=${encodeURIComponent(article.imageKeywords)}&per_page=1&orientation=landscape`,
       { headers: { Authorization: PEXELS_KEY } }
     ).then(r => r.json()).catch(() => ({ photos: [] }));
+
+    await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: "💾 *Step 3/3:* Saving your draft to the system..." , parse_mode: 'Markdown' })
+    });
 
     const [pexelsData] = await Promise.all([pexelsPromise]);
     const imageUrl = pexelsData.photos?.[0]?.src?.large2x || null;

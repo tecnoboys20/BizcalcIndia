@@ -105,15 +105,15 @@ export default async (req) => {
       throw new Error(`JSON Formatting Error: Gemini sent invalid formatting. Please try again with a slightly different topic.`);
     }
 
-    // 4. Find Image
-    const pexelsResp = await fetch(
+    // 4. Find Image & Save Gist (Parallel to save time)
+    const pexelsPromise = fetch(
       `https://api.pexels.com/v1/search?query=${encodeURIComponent(article.imageKeywords)}&per_page=1&orientation=landscape`,
       { headers: { Authorization: PEXELS_KEY } }
-    );
-    const pexelsData = await pexelsResp.json();
+    ).then(r => r.json()).catch(() => ({ photos: [] }));
+
+    const [pexelsData] = await Promise.all([pexelsPromise]);
     const imageUrl = pexelsData.photos?.[0]?.src?.large2x || null;
 
-    // 5. Save Draft as Gist
     const draft = {
       ...article,
       coverImage: imageUrl,
@@ -149,7 +149,7 @@ export default async (req) => {
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
         text: responseMsg,
-        parse_mode: 'MarkdownV2',
+        parse_mode: 'Markdown',
         reply_markup: {
           inline_keyboard: [[
             { text: '🚀 Publish Live', url: publishUrl },

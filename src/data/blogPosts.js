@@ -1,22 +1,99 @@
 export const blogPosts = [
   {
+    id: 'gstr-3b-filing-guide-india-2026',
+    title: "GSTR-3B Filing Guide: Due Dates, Rules & Late Fees 2026",
+    excerpt: "Master GSTR-3B filing with our comprehensive 2026 guide. Learn about due dates, eligibility, late fees, and rules to keep your Indian business tax-compliant.",
+    category: "GST & Taxes",
+    date: '2026-05-06',
+    readTime: "7 min read",
+    coverImage: "https://images.pexels.com/photos/5922402/pexels-photo-5922402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    coverColor: 'from-blue-500 to-indigo-600',
+    content: `# The Ultimate Guide to GSTR-3B: Compliance for Indian Entrepreneurs in 2026
+
+In the evolving landscape of Indian taxation, staying ahead of GST compliance is no longer just a legal requirement—it is a strategic business advantage. With GST collections hitting record highs of ₹2.43 Lakh Crore in April 2026, the Directorate General of GST Intelligence (DGGI) has become increasingly efficient at monitoring mismatches. For the modern Indian entrepreneur, understanding GSTR-3B is the first step toward a friction-free financial year.
+
+GSTR-3B is a self-declared summary monthly return (or quarterly for those under the QRMP scheme). It is where you declare your summary details of outward supplies, input tax credit (ITC) claimed, and the net tax payable. Unlike GSTR-1, which focuses on sales, GSTR-3B is where the actual money moves from your business bank account to the government treasury.
+
+## 1. Who Must File GSTR-3B and Eligibility Criteria
+
+Every person registered under the Goods and Services Tax (GST) must file GSTR-3B, even if there are no business transactions during a particular month (resulting in a 'Nil' return). 
+
+**Key Eligibility Points:**
+*   **Regular Taxpayers:** Mandatory monthly filing.
+*   **QRMP Scheme Taxpayers:** Quarterly filing for businesses with an aggregate turnover up to ₹5 Crores in the preceding financial year.
+*   **Composition Scheme:** Not required to file GSTR-3B (they file CMP-08).
+*   **Non-Resident Taxable Persons:** Exempt from GSTR-3B (they file GSTR-5).
+
+Failure to file GSTR-3B leads to the blocking of GSTR-1 filing for subsequent periods, creating a bottleneck in your supply chain as your customers won't be able to see the ITC in their GSTR-2B.
+
+## 2. Understanding GSTR-3B Due Dates for 2026
+
+Timely filing is critical to avoid the 18% per annum interest on net tax liability. The due dates for GSTR-3B are generally categorized based on your turnover and the scheme you have opted for.
+
+*   **Monthly Filers:** The 20th of the succeeding month. For example, the return for May 2026 must be filed by June 20, 2026.
+*   **QRMP Filers (Category X States):** 22nd of the month following the quarter (e.g., Chhattisgarh, Madhya Pradesh, Gujarat, Maharashtra, Karnataka, Goa, Kerala, Tamil Nadu, Telangana, Andhra Pradesh).
+*   **QRMP Filers (Category Y States):** 24th of the month following the quarter (e.g., Himachal Pradesh, Punjab, Uttarakhand, Haryana, Rajasthan, Uttar Pradesh, Bihar, Sikkim, West Bengal).
+
+Always check the official GST portal or the BizCalc India compliance calendar for any extensions granted by the CBIC during festive seasons or technical glitches.
+
+## 3. Late Fees and Penalties: The Cost of Delay
+
+Late filing of GSTR-3B attracts a daily late fee, which is automatically calculated by the GST portal in the subsequent month's return. It is important to note that late fees apply even for Nil returns, though at a lower rate.
+
+### GSTR-3B Late Fee Structure 2026
+
+| Return Type | Late Fee (CGST + SGST) | Maximum Ceiling per Return |
+| :--- | :--- | :--- |
+| Nil Tax Liability | ₹20 per day | ₹500 |
+| Annual Turnover < ₹1.5 Cr | ₹50 per day | ₹2,000 |
+| Annual Turnover ₹1.5 Cr - ₹5 Cr | ₹50 per day | ₹5,000 |
+| Annual Turnover > ₹5 Cr | ₹50 per day | ₹10,000 |
+
+Beyond late fees, interest at **18% per annum** is applicable on the tax amount paid through the Electronic Cash Ledger (i.e., the tax amount paid after exhausting ITC).
+
+## 4. Real-World Case Study: How 'Rajesh Electronics' Optimized ITC
+
+**The Business:** Rajesh Electronics, a medium-sized retail chain in Bengaluru with an annual turnover of ₹8 Crores.
+
+**The Challenge:** In late 2025, Rajesh found himself paying heavy interest and late fees because his accountant was waiting for physical invoices to arrive before filing GSTR-3B. This delay meant they often missed the 20th of the month deadline.
+
+**The Solution:** Rajesh implemented a 'GSTR-2B Reconciliation' workflow. Instead of waiting for physical papers, they used the auto-drafted GSTR-2B available on the 14th of every month to identify which suppliers hadn't uploaded invoices. They sent automated reminders to these suppliers on the 15th.
+
+**The Result:** By aligning their GSTR-3B filing with the data in GSTR-2B, Rajesh Electronics ensured they only claimed eligible ITC. This reduced their cash tax outflow by 12% and eliminated late fees entirely. In the first quarter of 2026, they saved ₹45,000 in potential penalties and interest.
+
+## 5. Pro-Tips for Error-Free GSTR-3B Filing
+
+Filing GSTR-3B is not just about data entry; it is about reconciliation. Follow these best practices to ensure your business stays audit-ready:
+
+1.  **Reconcile with GSTR-1:** Ensure that the outward supplies declared in GSTR-3B match the details submitted in GSTR-1. Mismatches often trigger automated GST notices (Form ASMT-10).
+2.  **Verify ITC with GSTR-2B:** Only claim ITC that is visible in your GSTR-2B. Under Rule 36(4), claiming excess ITC can lead to the suspension of your GST registration.
+3.  **Check Reverse Charge Mechanism (RCM):** Ensure that tax on supplies attracting RCM (like GTA services or legal fees) is paid in cash and then claimed as ITC in the same return.
+4.  **Use Digital Tools:** Manual calculations are prone to error. Use automated GST calculators to determine your exact liability after ITC adjustments.
+
+### Conclusion
+
+Compliance should not be a hurdle to your business growth. By understanding the nuances of GSTR-3B, from due dates to the importance of reconciliation, you can protect your cash flow and build a credible reputation with the tax authorities. 
+
+**Ready to simplify your business finances?** Use the [BizCalc India GST Calculator](https://bizcalcindia.netlify.app) to calculate your tax liability accurately and ensure your GSTR-3B filings are always spot on. Whether you are calculating GST, profit margins, or loan EMIs, BizCalc India is your partner in entrepreneurial success.`
+  },
+  {
     id: 'india-record-gst-collection-april-2026-sme-impact',
-    title: "India’s Record GST Collection: Impact on Small Businesses",
-    excerpt: "India's GST revenue hit a record ₹2.43 lakh crore in April 2026. Discover what this means for SME compliance, tax planning, and your business growth strategy.",
+    title: "Indiaâs Record GST Collection: Impact on Small Businesses",
+    excerpt: "India's GST revenue hit a record â¹2.43 lakh crore in April 2026. Discover what this means for SME compliance, tax planning, and your business growth strategy.",
     category: "GST & Taxes",
     date: '2026-05-02',
     readTime: "7 min read",
     coverImage: "https://images.pexels.com/photos/7580922/pexels-photo-7580922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     coverColor: 'from-blue-500 to-indigo-600',
-    content: `# India’s Record ₹2.43 Lakh Crore GST Collection: A Strategic Guide for Small Businesses
+    content: `# Indiaâs Record â¹2.43 Lakh Crore GST Collection: A Strategic Guide for Small Businesses
 
-In a landmark moment for the Indian economy, Gross GST collections for April 2026 have scaled an unprecedented peak of **₹2.43 lakh crore**. This 8.7% year-on-year growth signals not just a robust economic recovery but a fundamental shift in India's tax compliance landscape. For the Indian small business owner and MSME entrepreneur, these numbers are more than just headlines—they are a barometer for market health and a precursor to tighter regulatory oversight.
+In a landmark moment for the Indian economy, Gross GST collections for April 2026 have scaled an unprecedented peak of **â¹2.43 lakh crore**. This 8.7% year-on-year growth signals not just a robust economic recovery but a fundamental shift in India's tax compliance landscape. For the Indian small business owner and MSME entrepreneur, these numbers are more than just headlinesâthey are a barometer for market health and a precursor to tighter regulatory oversight.
 
 As the government leverages advanced data analytics and AI to monitor transactions, staying compliant is no longer optional; it is a competitive advantage. In this guide, we break down what this record collection means for your business and how you can navigate the evolving tax environment.
 
 ## 1. Why GST Revenue is Surging: The SME Contribution
 
-The jump to ₹2.43 lakh crore isn't solely due to large corporations. The integration of over 1 million small businesses into the digital ecosystem via platforms like Tide and the proactive investment by banks like SBI into the MSME ecosystem have played a pivotal role. 
+The jump to â¹2.43 lakh crore isn't solely due to large corporations. The integration of over 1 million small businesses into the digital ecosystem via platforms like Tide and the proactive investment by banks like SBI into the MSME ecosystem have played a pivotal role. 
 
 Several factors contribute to this surge:
 - **Increased Formalization:** More businesses are moving from the unorganized to the organized sector to claim Input Tax Credit (ITC).
@@ -31,24 +108,24 @@ When the government sees record revenue, it often leads to two specific outcomes
 High collections often indicate high transaction volumes. However, for SMEs, the 'Pay First, Claim Later' nature of GST can squeeze liquidity. It is crucial to monitor your GSTR-2B regularly to ensure your suppliers are filing their returns on time, allowing you to claim ITC without delays.
 
 ### The Shift Toward E-Invoicing
-With the threshold for mandatory e-invoicing consistently lowering over the years, the record collections in 2026 suggest that even smaller enterprises (with turnovers above ₹5 crore) are now fully integrated into the real-time reporting system. This transparency reduces the likelihood of 'scrutiny notices' but requires precise accounting.
+With the threshold for mandatory e-invoicing consistently lowering over the years, the record collections in 2026 suggest that even smaller enterprises (with turnovers above â¹5 crore) are now fully integrated into the real-time reporting system. This transparency reduces the likelihood of 'scrutiny notices' but requires precise accounting.
 
 | Metric | April 2025 | April 2026 | Growth (%) |
 | :--- | :--- | :--- | :--- |
-| Total GST Collection | ₹2.23 Lakh Cr | ₹2.43 Lakh Cr | 8.7% |
-| IGST (Import + Domestic) | ₹1.10 Lakh Cr | ₹1.21 Lakh Cr | 10.0% |
-| CGST | ₹48,000 Cr | ₹53,000 Cr | 10.4% |
-| SGST | ₹55,000 Cr | ₹61,000 Cr | 10.9% |
+| Total GST Collection | â¹2.23 Lakh Cr | â¹2.43 Lakh Cr | 8.7% |
+| IGST (Import + Domestic) | â¹1.10 Lakh Cr | â¹1.21 Lakh Cr | 10.0% |
+| CGST | â¹48,000 Cr | â¹53,000 Cr | 10.4% |
+| SGST | â¹55,000 Cr | â¹61,000 Cr | 10.9% |
 
 ## 3. Real-World Case Study: Optimizing GST for a Delhi-Based Manufacturer
 
 **The Business:** *Rajesh Engineering Works*, a mid-sized manufacturer of auto components in Okhla, Delhi.
 
-**The Problem:** In early 2025, Rajesh faced a severe cash flow crunch. Despite high sales, his GST liability was high because three of his primary raw material suppliers were defaulting on their GSTR-1 filings. This prevented Rajesh from claiming nearly ₹4.5 lakh in Input Tax Credit (ITC) every month.
+**The Problem:** In early 2025, Rajesh faced a severe cash flow crunch. Despite high sales, his GST liability was high because three of his primary raw material suppliers were defaulting on their GSTR-1 filings. This prevented Rajesh from claiming nearly â¹4.5 lakh in Input Tax Credit (ITC) every month.
 
 **The Solution:** Rajesh implemented a three-step 'Compliance First' strategy:
 1. **Supplier Audit:** He used a GST verification tool to check the compliance rating of his vendors.
-2. **Payment Terms:** He modified contracts to hold 10% of the payment until the supplier’s invoice reflected in his GSTR-2B.
+2. **Payment Terms:** He modified contracts to hold 10% of the payment until the supplierâs invoice reflected in his GSTR-2B.
 3. **Automated Calculation:** Instead of manual spreadsheets, he switched to digital GST calculators to predict monthly liabilities 10 days in advance.
 
 **The Result:** By April 2026, Rajesh not only recovered his blocked ITC but also improved his profit margins by 4% through better tax planning. His business contributed to the record April collections while maintaining a healthy cash reserve.
@@ -63,7 +140,7 @@ As India targets even higher revenue in the coming quarters, the GST Council is 
 
 ## 5. Future Outlook: Budget 2026 and MSMEs
 
-The recent Budget 2026 has lifted sentiment among startup investors and MSMEs. With the government’s focus on strengthening the MSME ecosystem through SBI-led fund investments, the ease of doing business is expected to improve. However, this 'ease' comes with the expectation of total transparency.
+The recent Budget 2026 has lifted sentiment among startup investors and MSMEs. With the governmentâs focus on strengthening the MSME ecosystem through SBI-led fund investments, the ease of doing business is expected to improve. However, this 'ease' comes with the expectation of total transparency.
 
 For Indian entrepreneurs, the message is clear: The economy is growing, and the tax net is widening. Those who use technology to manage their finances will thrive, while those relying on manual, outdated processes will struggle with compliance costs.
 
@@ -71,7 +148,7 @@ For Indian entrepreneurs, the message is clear: The economy is growing, and the 
 
 Don't let complex tax calculations slow down your growth. Whether you are calculating GST for a new client quote or planning your monthly tax outflow, accuracy is key to avoiding penalties.
 
-**Ready to simplify your business math?** Use our [Free GST Calculator](https://bizcalcindia.netlify.app/gst-calculator) to get instant, accurate results and keep your business compliant with the latest 2026 tax slabs. At BizCalc India, we build the tools you need to focus on what you do best—growing your business.`
+**Ready to simplify your business math?** Use our [Free GST Calculator](https://bizcalcindia.netlify.app/gst-calculator) to get instant, accurate results and keep your business compliant with the latest 2026 tax slabs. At BizCalc India, we build the tools you need to focus on what you do bestâgrowing your business.`
   },
   {
     id: 'gst-return-filing-due-dates-2025-26-guide',
@@ -84,7 +161,7 @@ Don't let complex tax calculations slow down your growth. Whether you are calcul
     coverColor: 'from-blue-500 to-indigo-600',
     content: `# GST Return Filing Due Dates 2025-26: A Comprehensive Guide for Indian Entrepreneurs
 
-For an Indian small business owner, keeping track of the Goods and Services Tax (GST) compliance calendar is as critical as managing daily sales. With the Indian governmentâs increasing focus on digital transparency and the recent surge in GST collectionsâhitting record highs of â¹2 lakh croreâthe importance of timely filing has never been higher. 
+For an Indian small business owner, keeping track of the Goods and Services Tax (GST) compliance calendar is as critical as managing daily sales. With the Indian governmentÃ¢ÂÂs increasing focus on digital transparency and the recent surge in GST collectionsÃ¢ÂÂhitting record highs of Ã¢ÂÂ¹2 lakh croreÃ¢ÂÂthe importance of timely filing has never been higher. 
 
 Missing a deadline doesn't just mean paying a late fee; it affects your GSTR-2B, impacts your customers' ability to claim Input Tax Credit (ITC), and ultimately damages your business's compliance rating. This guide breaks down the essential GST return filing due dates for FY 2025-26 and provides actionable strategies to stay ahead of the curve.
 
@@ -92,7 +169,7 @@ Missing a deadline doesn't just mean paying a late fee; it affects your GSTR-2B,
 
 The GST ecosystem in India operates on a multi-tier filing system based on your business turnover and the scheme you have opted for (Regular vs. QRMP). For most MSMEs, the primary forms to track are GSTR-1 (outward supplies) and GSTR-3B (summary return and tax payment).
 
-As we navigate the 2025-26 financial year, the GST Council has maintained a strict stance on deadlines to ensure a smooth flow of credit through the supply chain. Businesses with an aggregate turnover exceeding â¹5 crore in the previous financial year must file monthly. Meanwhile, smaller taxpayers can opt for the Quarterly Return Monthly Payment (QRMP) scheme, which simplifies the process but still requires monthly tax payments via the PMT-06 challan.
+As we navigate the 2025-26 financial year, the GST Council has maintained a strict stance on deadlines to ensure a smooth flow of credit through the supply chain. Businesses with an aggregate turnover exceeding Ã¢ÂÂ¹5 crore in the previous financial year must file monthly. Meanwhile, smaller taxpayers can opt for the Quarterly Return Monthly Payment (QRMP) scheme, which simplifies the process but still requires monthly tax payments via the PMT-06 challan.
 
 ### Key Monthly Deadlines to Remember:
 - **GSTR-1 (Monthly):** 11th of the succeeding month.
@@ -109,7 +186,7 @@ A common point of confusion for new entrepreneurs is the difference between GSTR
 
 | Form Type | Taxpayer Category | Frequency | Due Date |
 |-----------|-------------------|-----------|----------|
-| GSTR-1 | Turnover > â¹5 Cr or Monthly Filers | Monthly | 11th of every month |
+| GSTR-1 | Turnover > Ã¢ÂÂ¹5 Cr or Monthly Filers | Monthly | 11th of every month |
 | GSTR-1 (IFF) | QRMP Scheme Taxpayers | Quarterly (Monthly IFF) | 13th of every month |
 | GSTR-3B | Monthly Filers | Monthly | 20th of every month |
 | GSTR-3B | QRMP (Category X States*) | Quarterly | 22nd of the month following the quarter |
@@ -121,11 +198,11 @@ A common point of confusion for new entrepreneurs is the difference between GSTR
 
 ## 3. Real World Case Study: How Late Filing Impacted a Delhi-Based Manufacturer
 
-To understand the gravity of compliance, letâs look at **Rajesh Precision Tools**, a mid-sized manufacturing unit in Okhla, Delhi. In late 2024, Rajesh's accountant missed the GSTR-1 deadline for two consecutive months due to a software glitch and internal oversight.
+To understand the gravity of compliance, letÃ¢ÂÂs look at **Rajesh Precision Tools**, a mid-sized manufacturing unit in Okhla, Delhi. In late 2024, Rajesh's accountant missed the GSTR-1 deadline for two consecutive months due to a software glitch and internal oversight.
 
 **The Consequences:**
-1. **Customer Backlash:** Three of Rajesh's biggest clients could not see the ITC in their GSTR-2B. Consequently, they withheld payments worth â¹15 lakhs, citing that they wouldn't pay the GST component until the credit was visible.
-2. **Late Fees:** Rajesh incurred a late fee of â¹50 per day (â¹25 CGST + â¹25 SGST) for each form. While this seemed small, it added up over 60 days across multiple forms.
+1. **Customer Backlash:** Three of Rajesh's biggest clients could not see the ITC in their GSTR-2B. Consequently, they withheld payments worth Ã¢ÂÂ¹15 lakhs, citing that they wouldn't pay the GST component until the credit was visible.
+2. **Late Fees:** Rajesh incurred a late fee of Ã¢ÂÂ¹50 per day (Ã¢ÂÂ¹25 CGST + Ã¢ÂÂ¹25 SGST) for each form. While this seemed small, it added up over 60 days across multiple forms.
 3. **Interest Liability:** Under Section 50 of the CGST Act, he had to pay 18% per annum interest on the net tax liability paid through the electronic cash ledger.
 4. **Compliance Score:** His GST compliance rating took a hit, making it harder for him to secure a working capital loan from his bank a few months later.
 
@@ -135,7 +212,7 @@ To understand the gravity of compliance, letâs look at **Rajesh Precision T
 
 The Indian tax department has automated the calculation of late fees and interest, leaving little room for manual intervention or appeals. 
 
-- **Late Fee:** For a 'Nil' return, the late fee is â¹20 per day. For others, it is â¹50 per day, capped at a maximum amount (usually â¹5,000 to â¹10,000 depending on turnover). However, these caps are subject to change via notifications from the CBIC.
+- **Late Fee:** For a 'Nil' return, the late fee is Ã¢ÂÂ¹20 per day. For others, it is Ã¢ÂÂ¹50 per day, capped at a maximum amount (usually Ã¢ÂÂ¹5,000 to Ã¢ÂÂ¹10,000 depending on turnover). However, these caps are subject to change via notifications from the CBIC.
 - **Interest:** If you delay the payment of tax, you are liable to pay interest at 18% per annum. If you wrongly claim and utilize ITC, the interest rate can jump to 24%.
 - **Blocking of E-Way Bill:** If a taxpayer fails to file GSTR-3B for two consecutive periods, their E-Way Bill generation facility is blocked, effectively halting all physical movement of goods.
 
@@ -155,7 +232,7 @@ GST compliance is the backbone of a transparent and scalable business in India. 
 
 At **BizCalc India**, we understand that calculating GST shouldn't be complicated. Whether you are a startup founder or a seasoned trader, our suite of free business tools is designed to simplify your financial life. 
 
-**Ready to simplify your taxes?** Use our [Free GST Calculator](https://bizcalcindia.netlify.app) to accurately calculate your tax liability in seconds and ensure your invoices are always spot on. Don't let compliance hold you backâcalculate, file, and grow!`
+**Ready to simplify your taxes?** Use our [Free GST Calculator](https://bizcalcindia.netlify.app) to accurately calculate your tax liability in seconds and ensure your invoices are always spot on. Don't let compliance hold you backÃ¢ÂÂcalculate, file, and grow!`
   },
   {
     id: 'epfo-portal-trace-link-pf-accounts-guide',
@@ -170,11 +247,11 @@ At **BizCalc India**, we understand that calculating GST shouldn't be complicate
 
 For years, the Indian workforce has struggled with a fragmented retirement corpus. Every time an employee switches jobs, a new **Provident Fund (PF)** member ID is generated, often leading to multiple accounts that are never consolidated. For small business owners and HR managers, this creates administrative friction and compliance hurdles. 
 
-In a landmark move toward digital transformation, the **EmployeesÃ¢ÂÂ Provident Fund Organisation (EPFO)** is set to launch a centralized portal designed to trace and link multiple PF accounts automatically. This initiative aims to ensure that the 'one employee, one EPF account' vision becomes a reality. As a business owner, understanding this shift is crucial for maintaining employee satisfaction and ensuring seamless compliance.
+In a landmark move toward digital transformation, the **EmployeesÃÂ¢ÃÂÃÂ Provident Fund Organisation (EPFO)** is set to launch a centralized portal designed to trace and link multiple PF accounts automatically. This initiative aims to ensure that the 'one employee, one EPF account' vision becomes a reality. As a business owner, understanding this shift is crucial for maintaining employee satisfaction and ensuring seamless compliance.
 
 ## 1. Understanding the New Centralized PF System
 
-The upcoming EPFO portal is part of the **Centralized IT System 2.0**. Currently, PF accounts are managed across various regional offices, making the transfer process manual and often prone to delays. The new system will move toward a centralized database where an employeeÃ¢ÂÂs PF balance will follow them regardless of their location or employer change.
+The upcoming EPFO portal is part of the **Centralized IT System 2.0**. Currently, PF accounts are managed across various regional offices, making the transfer process manual and often prone to delays. The new system will move toward a centralized database where an employeeÃÂ¢ÃÂÃÂs PF balance will follow them regardless of their location or employer change.
 
 For **Indian MSMEs**, this means a significant reduction in the paperwork associated with employee onboarding. Instead of manual transfer forms (Form 13), the system will use the **Universal Account Number (UAN)** and Aadhaar-based validation to identify and merge old accounts into the current active one.
 
@@ -192,7 +269,7 @@ A major pain point for the Indian labor force is 'dormant' or 'inoperative' acco
 As a business owner, your responsibility lies in ensuring that your employees' contributions are correctly mapped to their UAN. The launch of this portal simplifies several **compliance benchmarks**:
 
 *   **Reduced Administrative Burden:** HR teams will no longer need to follow up on manual transfer requests from new hires.
-*   **Improved Audit Trails:** A centralized system ensures that your businessÃ¢ÂÂs contributions are accurately reflected, reducing the risk of discrepancies during labor law audits.
+*   **Improved Audit Trails:** A centralized system ensures that your businessÃÂ¢ÃÂÃÂs contributions are accurately reflected, reducing the risk of discrepancies during labor law audits.
 *   **Employee Retention:** By facilitating a seamless transfer of social security benefits, you demonstrate a commitment to your employees' long-term financial health.
 
 It is essential to ensure that your **Electronic Challan-cum-Return (ECR)** filings are accurate and that all employees have their KYC updated to benefit from this new system.
@@ -234,7 +311,7 @@ Whether you are calculating your monthly liability with our [Free GST Calculator
     readTime: "7 min read",
     coverImage: "https://images.pexels.com/photos/8962451/pexels-photo-8962451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     coverColor: 'from-blue-500 to-indigo-600',
-    content: `The Indian tax landscape is set for a significant overhaul starting **April 1, 2026**. For small business owners and MSMEs, staying compliant with **Tax Deducted at Source (TDS)** and **Tax Collected at Source (TCS)** is not just a legal requirementÃÂ¢ÃÂÃÂit is critical for maintaining healthy cash flow. With the introduction of **Form 121** and revised rates under the latest Finance Act, entrepreneurs must adapt their accounting workflows to avoid penalties.
+    content: `The Indian tax landscape is set for a significant overhaul starting **April 1, 2026**. For small business owners and MSMEs, staying compliant with **Tax Deducted at Source (TDS)** and **Tax Collected at Source (TCS)** is not just a legal requirementÃÂÃÂ¢ÃÂÃÂÃÂÃÂit is critical for maintaining healthy cash flow. With the introduction of **Form 121** and revised rates under the latest Finance Act, entrepreneurs must adapt their accounting workflows to avoid penalties.
 
 At **BizCalc India**, we aim to simplify these complex shifts. This guide breaks down the essential changes, the simplification of declarations, and how your enterprise can prepare for the 2026-27 fiscal year.
 
@@ -242,7 +319,7 @@ At **BizCalc India**, we aim to simplify these complex shifts. This guide breaks
 
 The primary objective of the 2026 amendments is to broaden the tax base while reducing the compliance burden on small taxpayers. The government has introduced several **new sections** in the Income Tax Act to capture high-value digital transactions and cross-border payments that were previously in a grey area.
 
-For an Indian entrepreneur, this means that the threshold for deducting tax on certain professional services and contractual payments has been recalibrated. **Section 194M** and **Section 194Q** have seen specific updates regarding the timing of deductionÃÂ¢ÃÂÃÂnow strictly requiring deduction at the time of credit or payment, whichever is earlier, with no exceptions for delayed invoicing.
+For an Indian entrepreneur, this means that the threshold for deducting tax on certain professional services and contractual payments has been recalibrated. **Section 194M** and **Section 194Q** have seen specific updates regarding the timing of deductionÃÂÃÂ¢ÃÂÃÂÃÂÃÂnow strictly requiring deduction at the time of credit or payment, whichever is earlier, with no exceptions for delayed invoicing.
 
 ## 2. Introducing Form 121: The Single TDS Declaration
 
@@ -263,7 +340,7 @@ The 2026 changes have adjusted rates for specific sectors to promote the **MSME 
 |------------------|---------------------|----------------------------|------------|
 | E-commerce Sales | 1% | 0.5% | Lowered to boost digital MSMEs |
 | Professional Fees| 10% | 7.5% | Reduced for registered MSMEs |
-| Purchase of Goods| 0.1% | 0.1% | Threshold lowered to ÃÂ¢ÃÂÃÂ¹25 Lakhs |
+| Purchase of Goods| 0.1% | 0.1% | Threshold lowered to ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹25 Lakhs |
 | Rent on Immovable Property | 10% | 10% | Mandatory PAN-Aadhaar linking |
 
 **Note:** Failure to provide a valid PAN now results in a flat **20% TDS rate** across almost all categories, making it imperative for business owners to verify the tax credentials of their vendors using a **GST/PAN verification tool**.
@@ -304,7 +381,7 @@ Navigating the **Income Tax Act** changes doesn't have to be overwhelming. At **
   {
     id: 'how-to-calculate-gst-india',
     title: 'How to Calculate GST in India: A Complete Step-by-Step Guide for 2026',
-    excerpt: 'Learn everything about India\'s GST system ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ CGST, SGST, IGST, the different tax slabs, and how to quickly calculate them for your business.',
+    excerpt: 'Learn everything about India\'s GST system ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ CGST, SGST, IGST, the different tax slabs, and how to quickly calculate them for your business.',
     category: 'GST & Taxes',
     date: '2026-04-25',
     readTime: '6 min read',
@@ -325,24 +402,24 @@ India uses a tiered GST system with the following rates:
 
 | GST Rate | Applied On |
 |---|---|
-| **0%** | Essential items ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ raw food, healthcare services |
-| **5%** | Basic necessities ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ packaged food, transport |
-| **12%** | Standard goods ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ processed food, business services |
-| **18%** | Most services ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ software, restaurants, telecom |
-| **28%** | Luxury items ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ cars, tobacco, high-end electronics |
+| **0%** | Essential items ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ raw food, healthcare services |
+| **5%** | Basic necessities ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ packaged food, transport |
+| **12%** | Standard goods ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ processed food, business services |
+| **18%** | Most services ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ software, restaurants, telecom |
+| **28%** | Luxury items ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ cars, tobacco, high-end electronics |
 
 ---
 
 ## Types of GST
 
-- **CGST** (Central GST) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Collected by the central government on intra-state sales.
-- **SGST** (State GST) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Collected by the state government on intra-state sales.
-- **IGST** (Integrated GST) ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Applied on inter-state sales and imports. Shared between central and state governments.
+- **CGST** (Central GST) ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Collected by the central government on intra-state sales.
+- **SGST** (State GST) ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Collected by the state government on intra-state sales.
+- **IGST** (Integrated GST) ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Applied on inter-state sales and imports. Shared between central and state governments.
 
-For example, if you sell goods worth ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹10,000 within the same state at 18% GST:
-- CGST = 9% = ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹900
-- SGST = 9% = ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹900
-- Total GST = ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹1,800
+For example, if you sell goods worth ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹10,000 within the same state at 18% GST:
+- CGST = 9% = ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹900
+- SGST = 9% = ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹900
+- Total GST = ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹1,800
 
 ---
 
@@ -350,15 +427,15 @@ For example, if you sell goods worth ÃÂÃÂ¢ÃÂÃÂÃÂÃ�
 
 **Adding GST to a base price:**
 
-> Final Price = Base Price ÃÂÃÂÃÂÃÂ (1 + GST Rate / 100)
+> Final Price = Base Price ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ (1 + GST Rate / 100)
 
-**Example:** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹5,000 + 18% GST = ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹5,000 ÃÂÃÂÃÂÃÂ 1.18 = **ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹5,900**
+**Example:** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹5,000 + 18% GST = ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹5,000 ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 1.18 = **ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹5,900**
 
 **Removing GST from an inclusive price:**
 
 > Base Price = Inclusive Price / (1 + GST Rate / 100)
 
-**Example:** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹5,900 inclusive of 18% GST = ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹5,900 / 1.18 = **ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹5,000**
+**Example:** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹5,900 inclusive of 18% GST = ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹5,900 / 1.18 = **ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹5,000**
 
 ---
 
@@ -379,7 +456,7 @@ Skip the manual calculations and use our **free online GST Calculator** to insta
     content: `
 ## Why Profit Margin Matters
 
-Many Indian small business owners set their prices based on gut feeling. But without understanding your actual profit margin, you could be working hard for very little return ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ or even running at a loss without realizing it.
+Many Indian small business owners set their prices based on gut feeling. But without understanding your actual profit margin, you could be working hard for very little return ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ or even running at a loss without realizing it.
 
 Profit margin tells you exactly how much money you are keeping from every rupee you earn.
 
@@ -389,26 +466,26 @@ Profit margin tells you exactly how much money you are keeping from every rupee 
 
 **Gross Profit Margin** considers only the direct cost of producing goods (Cost of Goods Sold).
 
-> Gross Margin = ((Revenue - COGS) / Revenue) ÃÂÃÂÃÂÃÂ 100
+> Gross Margin = ((Revenue - COGS) / Revenue) ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 100
 
-**Net Profit Margin** considers ALL expenses ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ rent, salaries, marketing, taxes.
+**Net Profit Margin** considers ALL expenses ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ rent, salaries, marketing, taxes.
 
-> Net Margin = (Net Profit / Revenue) ÃÂÃÂÃÂÃÂ 100
+> Net Margin = (Net Profit / Revenue) ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 100
 
 ---
 
-## Markup vs. Margin ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ The Confusion Explained
+## Markup vs. Margin ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ The Confusion Explained
 
 These two are often confused, but they are very different:
 
-| Term | Formula | Example (Cost ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹500, Price ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹750) |
+| Term | Formula | Example (Cost ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹500, Price ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹750) |
 |---|---|---|
-| **Markup** | (Price - Cost) / Cost ÃÂÃÂÃÂÃÂ 100 | 50% |
-| **Margin** | (Price - Cost) / Price ÃÂÃÂÃÂÃÂ 100 | 33.3% |
+| **Markup** | (Price - Cost) / Cost ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 100 | 50% |
+| **Margin** | (Price - Cost) / Price ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 100 | 33.3% |
 
 Markup is calculated on **cost**. Margin is calculated on **selling price**.
 
-A business saying "we mark up by 50%" sounds better than "we have a 33% margin" ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ but they describe the same product!
+A business saying "we mark up by 50%" sounds better than "we have a 33% margin" ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ but they describe the same product!
 
 ---
 
@@ -418,20 +495,20 @@ It depends on your industry:
 
 | Industry | Typical Net Margin |
 |---|---|
-| Retail (kirana/FMCG) | 2ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ5% |
-| Restaurants | 5ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ10% |
-| Freelancing/Consulting | 20ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ40% |
-| SaaS/Software | 30ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ60% |
-| Manufacturing | 8ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ15% |
+| Retail (kirana/FMCG) | 2ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ5% |
+| Restaurants | 5ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ10% |
+| Freelancing/Consulting | 20ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ40% |
+| SaaS/Software | 30ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ60% |
+| Manufacturing | 8ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ15% |
 
 ---
 
 ## How to Improve Your Profit Margin
 
-1. **Negotiate better supplier prices** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Even a 5% saving on your cost increases your margin significantly.
-2. **Eliminate low-margin products** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Focus your energy on your most profitable offerings.
-3. **Automate repetitive tasks** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Save on operational costs using free tools.
-4. **Re-examine your pricing** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Many businesses underprice out of fear.
+1. **Negotiate better supplier prices** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Even a 5% saving on your cost increases your margin significantly.
+2. **Eliminate low-margin products** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Focus your energy on your most profitable offerings.
+3. **Automate repetitive tasks** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Save on operational costs using free tools.
+4. **Re-examine your pricing** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Many businesses underprice out of fear.
 
 ---
 
@@ -454,7 +531,7 @@ Use our **free Profit Margin Calculator** to instantly find your gross margin, n
 
 A GST invoice is a legal document issued by a GST-registered business when supplying goods or services. It forms the basis for claiming Input Tax Credit (ITC) and is mandatory for all businesses with GST registration.
 
-Without a proper GST invoice, your buyers cannot claim the Input Tax Credit they are entitled to ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ which can damage your business relationships.
+Without a proper GST invoice, your buyers cannot claim the Input Tax Credit they are entitled to ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ which can damage your business relationships.
 
 ---
 
@@ -462,7 +539,7 @@ Without a proper GST invoice, your buyers cannot claim the Input Tax Credit they
 
 According to the GST Act, every GST invoice must include:
 
-1. **Invoice Number** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ A unique, sequential number.
+1. **Invoice Number** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ A unique, sequential number.
 2. **Invoice Date**
 3. **Supplier's Name, Address, and GSTIN**
 4. **Recipient's Name, Address, and GSTIN** (for B2B)
@@ -478,10 +555,10 @@ According to the GST Act, every GST invoice must include:
 
 ## Types of GST Invoices
 
-- **Tax Invoice** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ For registered businesses making taxable supplies.
-- **Bill of Supply** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ For exempt supplies or composition scheme businesses.
-- **Receipt Voucher** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ When advance payment is received.
-- **Refund Voucher** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ If the supply doesn't happen after advance payment.
+- **Tax Invoice** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ For registered businesses making taxable supplies.
+- **Bill of Supply** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ For exempt supplies or composition scheme businesses.
+- **Receipt Voucher** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ When advance payment is received.
+- **Refund Voucher** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ If the supply doesn't happen after advance payment.
 
 ---
 
@@ -505,7 +582,7 @@ No subscription. No watermark. 100% free.
   {
     id: 'small-business-tools-india-2026',
     title: '7 Free Business Tools Every Indian Small Business Owner Needs in 2026',
-    excerpt: 'Running an Indian small business is tough. These 7 free tools ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ from GST calculators to invoice generators ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ will save you hours every week.',
+    excerpt: 'Running an Indian small business is tough. These 7 free tools ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ from GST calculators to invoice generators ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ will save you hours every week.',
     category: 'Business Tools',
     date: '2026-04-15',
     readTime: '8 min read',
@@ -527,7 +604,7 @@ Manually calculating GST is time-consuming and error-prone. A free GST calculato
 - Get the exact CGST and SGST breakdown
 - Avoid mistakes on customer quotes
 
-ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ **Completely free** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ BizCalc India's GST Calculator requires no sign-up.
+ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ **Completely free** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ BizCalc India's GST Calculator requires no sign-up.
 
 ---
 
@@ -538,7 +615,7 @@ Creating a professional PDF invoice shouldn't require expensive software. With o
 - Include multiple line items with auto-GST calculation
 - Download a professional PDF in seconds
 
-ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Your business details are saved for next time ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ no re-typing!
+ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Your business details are saved for next time ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ no re-typing!
 
 ---
 
@@ -553,7 +630,7 @@ Stop guessing your prices. A profit margin calculator shows you:
 
 ## 4. Discount Calculator
 
-For retail shops and e-commerce sellers ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ a discount calculator helps you:
+For retail shops and e-commerce sellers ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ a discount calculator helps you:
 - Find the exact final price after any discount
 - Plan your sale pricing without losing money
 - Show customers how much they are saving
@@ -591,7 +668,7 @@ For any Indian business with customers, WhatsApp Business is essential:
 
 You don't need to use all 7 tools at once. Start with what your business needs most urgently. If GST calculations are eating your time, start with a free GST calculator. If invoicing is a problem, use a free invoice generator.
 
-All of BizCalc India's tools are available in one place ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 100% free, no sign-up required.
+All of BizCalc India's tools are available in one place ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 100% free, no sign-up required.
     `
   },
   {
@@ -610,10 +687,10 @@ GST registration is mandatory if your business exceeds these annual turnover thr
 
 | Business Type | Mandatory Threshold |
 |---|---|
-| Goods (most states) | ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹40 Lakhs |
-| Goods (special category states) | ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹20 Lakhs |
-| Services (all states) | ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹20 Lakhs |
-| Special category states (services) | ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹10 Lakhs |
+| Goods (most states) | ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹40 Lakhs |
+| Goods (special category states) | ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹20 Lakhs |
+| Services (all states) | ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹20 Lakhs |
+| Special category states (services) | ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹10 Lakhs |
 
 Special category states include: Manipur, Mizoram, Nagaland, Tripura, Meghalaya, Arunachal Pradesh, Sikkim, and Uttarakhand.
 
@@ -635,10 +712,10 @@ Certain businesses must register for GST regardless of their turnover:
 ## Benefits of Voluntary GST Registration
 
 Even if you are below the threshold, voluntary registration has advantages:
-1. **Input Tax Credit** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Claim back the GST you pay on purchases.
-2. **B2B Credibility** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Large businesses prefer to buy from GST-registered suppliers.
-3. **Pan-India Operations** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Easier to expand across state borders.
-4. **Competitive Advantage** ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Appear more professional and established.
+1. **Input Tax Credit** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Claim back the GST you pay on purchases.
+2. **B2B Credibility** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Large businesses prefer to buy from GST-registered suppliers.
+3. **Pan-India Operations** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Easier to expand across state borders.
+4. **Competitive Advantage** ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Appear more professional and established.
 
 ---
 
@@ -658,11 +735,11 @@ Even if you are below the threshold, voluntary registration has advantages:
 
 1. Visit **gst.gov.in** and click "Services > Registration > New Registration"
 2. Select **Taxpayer** as the type and choose your state/district
-3. Fill Part A ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ PAN, mobile number, email OTP verification
-4. Fill Part B ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Business details, promoter details, bank account, documents
+3. Fill Part A ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ PAN, mobile number, email OTP verification
+4. Fill Part B ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Business details, promoter details, bank account, documents
 5. Submit with **Digital Signature Certificate (DSC)** or **EVC** (OTP-based)
 6. ARN (Application Reference Number) is generated
-7. GST officer verifies and approves ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ **GSTIN issued within 7 working days**
+7. GST officer verifies and approves ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ **GSTIN issued within 7 working days**
 
 ---
 
@@ -675,7 +752,7 @@ Even if you are below the threshold, voluntary registration has advantages:
 | GSTR-9 | Annual | 31st December |
 | CMP-08 | Quarterly | 18th of next month |
 
-Missing deadlines attracts a late fee of ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹50 per day (ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¹20 for nil returns).
+Missing deadlines attracts a late fee of ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹50 per day (ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹20 for nil returns).
 
 ---
 

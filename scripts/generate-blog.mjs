@@ -11,9 +11,10 @@ const NETLIFY_URL = 'https://bizcalcindia.netlify.app';
 
 async function fetchTrendingTopics() {
   const feeds = [
-    'https://news.google.com/rss/search?q=india+GST+income+tax+2026&hl=en-IN&gl=IN&ceid=IN:en',
-    'https://news.google.com/rss/search?q=india+small+business+finance&hl=en-IN&gl=IN&ceid=IN:en',
-    'https://news.google.com/rss/search?q=india+MSME+startup+entrepreneur&hl=en-IN&gl=IN&ceid=IN:en',
+    'https://news.google.com/rss/search?q=india+ecommerce+D2C+retail&hl=en-IN&gl=IN&ceid=IN:en',
+    'https://news.google.com/rss/search?q=india+small+business+marketing+growth&hl=en-IN&gl=IN&ceid=IN:en',
+    'https://news.google.com/rss/search?q=india+startup+funding+tech+trends&hl=en-IN&gl=IN&ceid=IN:en',
+    'https://news.google.com/rss/search?q=india+freelance+creator+economy&hl=en-IN&gl=IN&ceid=IN:en'
   ];
   const parser = new XMLParser();
   let titles = [];
@@ -27,18 +28,18 @@ async function fetchTrendingTopics() {
       arr.slice(0, 3).forEach(i => i.title && titles.push(i.title));
     } catch (e) { console.warn('Feed error:', e.message); }
   }
-  return titles.filter(Boolean).slice(0, 9);
+  return titles.filter(Boolean).slice(0, 12);
 }
 
 async function generateArticle(topics) {
   const topicsText = topics.map((t, i) => `${i + 1}. ${t}`).join('\n');
-  const prompt = `You are Dhanvi Sharma, an SEO content strategist and writer for BizCalc India. You are a real human writing about Indian business, finance, and GST.
+  const prompt = `You are Dhanvi Sharma, an SEO content strategist and writer for BizCalc India. You are a real human writing about Indian business, marketing, e-commerce, and digital growth.
 
 Today's raw news headlines:
 ${topicsText}
 
 Task 1: KEYWORD DISCOVERY
-Analyze the headlines. Ignore highly saturated, popular topics where big news sites dominate. Instead, find a "low-competition, high-potential" niche or long-tail keyword hidden in these headlines. Look for something specific that Indian MSME owners are actually struggling with or searching for, but isn't over-covered. 
+Analyze the headlines. Find a "low-competition, high-potential" niche or long-tail keyword hidden in these headlines. Look for something specific that Indian MSME owners, D2C founders, or freelancers are actually struggling with or searching for. It does NOT have to be about GST. Pick whatever has the highest potential for viral traffic or solves a real pain point (e.g., WhatsApp marketing, finding suppliers, local SEO, funding, etc.).
 
 Task 2: ULTRA-HUMAN BLOG WRITING
 Write a blog post about this specific topic. 
@@ -55,7 +56,7 @@ Respond ONLY with valid JSON — no markdown wrapper, no extra text:
   "id": "url-friendly-long-tail-slug",
   "title": "A natural, catchy title (not robotic)",
   "excerpt": "A human-sounding meta description.",
-  "category": "GST & Taxes | Business Growth",
+  "category": "Generate an appropriate category like: Digital Marketing, D2C Growth, Finance, Productivity, etc.",
   "readTime": "e.g. 5 min read",
   "authorId": "dhanvi-sharma",
   "imageKeywords": "candid real life authentic indian office",

@@ -32,24 +32,34 @@ async function fetchTrendingTopics() {
 
 async function generateArticle(topics) {
   const topicsText = topics.map((t, i) => `${i + 1}. ${t}`).join('\n');
-  const prompt = `You are a senior SEO content strategist for BizCalc India — a free business tools website for Indian entrepreneurs (bizcalcindia.netlify.app).
+  const prompt = `You are Dhanvi Sharma, an SEO content strategist and writer for BizCalc India. You are a real human writing about Indian business, finance, and GST.
 
-Today's trending Indian finance/business headlines:
+Today's raw news headlines:
 ${topicsText}
 
-Pick the ONE topic with the highest Google ranking potential for Indian small business owners (high search volume informational queries about GST, income tax, invoicing, profit margins, business finance).
+Task 1: KEYWORD DISCOVERY
+Analyze the headlines. Ignore highly saturated, popular topics where big news sites dominate. Instead, find a "low-competition, high-potential" niche or long-tail keyword hidden in these headlines. Look for something specific that Indian MSME owners are actually struggling with or searching for, but isn't over-covered. 
 
-Write a complete SEO-optimized blog article. Respond ONLY with valid JSON — no markdown wrapper, no extra text:
+Task 2: ULTRA-HUMAN BLOG WRITING
+Write a blog post about this specific topic. 
+CRITICAL RULES FOR TONE:
+- Write exactly like a human who just read some interesting data and is sharing their raw perspective. 
+- Use phrases like "I was reading about...", "Here's my take on this...", "The data clearly shows..."
+- ABSOLUTELY NO AI JARGON. Do not use words like "delve into", "navigate the complexities", "fast-paced digital world", "unveil", "unlock". If it sounds like a machine wrote it, rewrite it.
+- Include a chunk of real raw data (trendy or evergreen) to back up your points.
+- Mix trending news with evergreen advice. 
+
+Respond ONLY with valid JSON — no markdown wrapper, no extra text:
 
 {
-  "id": "url-friendly-slug",
-  "title": "SEO title under 60 chars with primary keyword",
-  "excerpt": "Meta description 150-160 chars with primary keyword",
-  "category": "GST & Taxes",
-  "readTime": "7 min read",
+  "id": "url-friendly-long-tail-slug",
+  "title": "A natural, catchy title (not robotic)",
+  "excerpt": "A human-sounding meta description.",
+  "category": "GST & Taxes | Business Growth",
+  "readTime": "e.g. 5 min read",
   "authorId": "dhanvi-sharma",
-  "imageKeywords": "candid real life authentic indian office/business",
-  "content": "A high-authority, 1000-word markdown article following E-E-A-T guidelines for Indian entrepreneurs. Include a 'Real World Case Study' section. Use 5 H2s, 1 table, and a closing CTA for BizCalc India tools."
+  "imageKeywords": "candid real life authentic indian office",
+  "content": "A 1000-word highly opinionated, data-backed article written in the first-person ('I'). Include raw data points, 5 H2s, a table comparing real facts, and an engaging conversational tone that connects to BizCalc India's free tools."
 }`;
 
   const resp = await fetch(

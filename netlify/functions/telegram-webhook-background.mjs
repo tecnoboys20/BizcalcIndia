@@ -195,19 +195,14 @@ export default async (req) => {
       body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: "✅ *Draft Saved!* Preparing your full review..." , parse_mode: 'Markdown' })
     });
 
-    const fullContent = article.content.length > 2000 
-      ? article.content.substring(0, 2000) + "\n\n...(Truncated for Telegram. Read full draft at link below)..." 
-      : article.content;
-
     const escapeHTML = (str) => str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
-    
     const safeTitle = escapeHTML(article.title);
     const safeExcerpt = escapeHTML(article.excerpt);
 
     const publishUrl = `${NETLIFY_URL}/.netlify/functions/publish-blog?gist=${gistId}&token=${PUBLISH_SECRET}`;
-    const gistUrl = `https://gist.github.com/${gistId}`;
+    const previewUrl = `${NETLIFY_URL}/preview?gist=${gistId}`;
     
-    const responseMsg = `<b>📝 DRAFT REVIEW: ${safeTitle}</b>\n\n<i>${safeExcerpt}</i>\n\n${fullContent}\n\n🔗 <b>Full Draft Link (Cross-Check here):</b> ${gistUrl}\n\n🖼 Image: ${imageUrl ? '✅ Found' : '❌ Not found'}`;
+    const responseMsg = `<b>📝 DRAFT READY: ${safeTitle}</b>\n\n<i>${safeExcerpt}</i>\n\nYour article is ready! Click "Read Full Preview" to see exactly how it will look on your website.\n\n🖼 Image: ${imageUrl ? '✅ Found' : '❌ Not found'}`;
 
     await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`, {
       method: 'POST',
@@ -219,7 +214,7 @@ export default async (req) => {
         reply_markup: {
           inline_keyboard: [
             [ { text: '🚀 Publish Live', url: publishUrl } ],
-            [ { text: '📖 Read Full Draft', url: gistUrl } ],
+            [ { text: '👀 Read Full Preview', url: previewUrl } ],
             [ { text: '🗑 Delete Draft', url: `${NETLIFY_URL}/.netlify/functions/reject-blog?gist=${gistId}&token=${PUBLISH_SECRET}` } ],
           ],
         },

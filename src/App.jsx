@@ -10,7 +10,7 @@ import LeadCaptureModal from './components/LeadCaptureModal';
 import FAQ from './components/FAQ';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
-
+import PreviewPage from './pages/PreviewPage';
 import PricingPage from './pages/PricingPage';
 import { AuthProvider } from './contexts/AuthContext';
 import AuthModal from './components/AuthModal';
@@ -86,6 +86,7 @@ function App() {
         {/* Blog */}
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogPostPage />} />
+        <Route path="/preview" element={<PreviewPage />} />
         
         {/* Pricing */}
         <Route path="/pricing" element={<PricingPage />} />

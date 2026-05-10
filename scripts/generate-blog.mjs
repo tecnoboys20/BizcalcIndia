@@ -47,7 +47,7 @@ Write a complete SEO-optimized blog article. Respond ONLY with valid JSON — no
   "excerpt": "Meta description 150-160 chars with primary keyword",
   "category": "GST & Taxes",
   "readTime": "7 min read",
-  "authorId": "arjun-sharma",
+  "authorId": "dhanvi-sharma",
   "imageKeywords": "candid real life authentic indian office/business",
   "content": "A high-authority, 1000-word markdown article following E-E-A-T guidelines for Indian entrepreneurs. Include a 'Real World Case Study' section. Use 5 H2s, 1 table, and a closing CTA for BizCalc India tools."
 }`;

@@ -51,7 +51,7 @@ export default async (req) => {
         "excerpt": "Meta description (150 chars) that drives clicks",
         "category": "GST & Taxes | Business Growth | Finance Tips",
         "readTime": "e.g. 6 min read",
-        "authorId": "arjun-sharma",
+        "authorId": "dhanvi-sharma",
         "imageKeywords": "candid real life authentic indian business",
         "content": "The refined article in high-quality markdown. Add a 'Pro Tip' or 'Expert Insight' block to sound more human."
       }
@@ -70,7 +70,7 @@ export default async (req) => {
         "excerpt": "Meta description (150 chars) that drives clicks",
         "category": "GST & Taxes | Business Growth | Finance Tips",
         "readTime": "e.g. 6 min read",
-        "authorId": "arjun-sharma",
+        "authorId": "dhanvi-sharma",
         "imageKeywords": "candid real life authentic indian office/business scenario",
         "content": "A high-authority, 1000-word masterclass following E-E-A-T. IMPORTANT: Include a section on 'Real World Experience' or 'What People are Asking on Social Media' to add human context. Use 1 table, 5 H2s, and actionable Indian business advice."
       }`;
